@@ -1,0 +1,69 @@
+::root{
+    background-color: bisque;
+}
+
+.header-btn {
+    float: right;
+}
+.selected {
+  color: white;
+  background-color: purple;
+
+}
+
+
+#btn1{
+  font-size: 18px;
+  border: 2px solid gray;
+  width: 84px;
+  height: 40px;
+  text-align: center;
+  margin-top: 4px;
+}
+/* 
+UPdate 2 : turns out this doesnot work great so i looked into stack overflow further 
+and discovered using classlist i can keep the states so did that :)
+.home-btn:focus{
+    background-color: aqua;
+} */
+
+/*while on stack overflow i learned that this is only for when the button is targetting it self only some js tickery has to be used 
+UPDATE: turns out you dont you could just use :focus :P i feel dumb
+/* .home-btn:target{
+  font-size: 18px;
+  border: 2px solid red;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+} */
+
+.contact-btn{
+  font-size: 18px;
+  border: 2px solid gray;
+  width: 84px;
+  height: 40px;
+  text-align: center;
+  margin-top: 4px;
+  text-decoration: none;
+}
+.skills-btn{
+  font-size: 18px;
+  border: 2px solid gray;
+  width: 84px;
+  height: 40px;
+  text-align: center;
+  margin-top: 4px;
+  text-decoration: none;
+}
+
+.project-btn{
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid gray;
+  width: 84px;
+  height: 40px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+
