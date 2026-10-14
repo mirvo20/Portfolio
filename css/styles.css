@@ -1,6 +1,16 @@
-::root{
-    background-color: bisque;
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+html{
+  min-height: 100%;
+  overflow: hidden;
 }
+
+body{
+  height: calc(100vh - 8em);
+  padding: 0em;
+  color: rgba(255,255,255,.75);
+  font-family: 'Anonymous Pro', monospace;  
+  background-color: rgb(25,25,25); }
 
 .header-btn {
     float: right;
@@ -107,4 +117,31 @@ UPDATE: turns out you dont you could just use :focus :P i feel dumb
 
 .playing #tonearm .swing{
   transform: rotate(0deg);
+}
+
+/* Credit for the typewriter animation: https://css-tricks.com/snippets/css/typewriter-effect/ */
+.line-1{
+    position: relative;
+    top: 40%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+.typewriter-txt{
+  animation: typewriter 2s steps(18) 0.3s 1 normal both,
+  blinkTextCursor 500ms steps(18) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 18ch;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
