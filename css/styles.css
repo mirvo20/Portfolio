@@ -66,4 +66,42 @@ UPDATE: turns out you dont you could just use :focus :P i feel dumb
   margin-top: 4px;
 }
 
+/* size of the svg */
+#player svg{
+  width: 700px;
+  max-width: 100%;
+}
 
+#record .spin{
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.playing #record .spin{
+  animation-play-state: running;
+}
+
+@keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+/* arm / play head */
+#tonearm .swing{
+  transform-box: view-box;
+  transform-origin: 0 0;
+  transform: rotate(38deg);
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out; /* gradual increase/decrease in speed in start and end of animation according to web*/
+}
+
+.playing #tonearm .swing{
+  transform: rotate(0deg);
+}
