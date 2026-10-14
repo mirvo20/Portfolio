@@ -6,7 +6,7 @@ var projects_btn = document.getElementById("btn4");
 //vynl player vars
 var box = document.getElementById("player");
 var svgNS = 'http://www.w3.org/2000/svg';
-var play_button = document.getElementById("player_btn")
+// var play_button = document.getElementById("player_btn") // same reason as the html code
 
 function home(){
     home_btn.classList.add("selected")
@@ -52,6 +52,10 @@ async function load_player() { // have to use async so i can make it start after
 
     box.innerHTML = svgTxt;
     setupPlayer();
+
+    setTimeout(function(){
+        box.classList.add('playing');
+    }, 200);
 }
 
 function rotatePart(groupId, centerX, centerY, tilt, className){
@@ -93,7 +97,7 @@ function startStop(){
     box.classList.toggle('playing');
 }
 
-play_button.onclick = startStop;
+// play_button.onclick = startStop;
 
 load_player();
 

@@ -68,8 +68,11 @@ UPDATE: turns out you dont you could just use :focus :P i feel dumb
 
 /* size of the svg */
 #player svg{
-  width: 700px;
+  width: 500px;
   max-width: 100%;
+  margin-top: 120px;
+  margin-left: 1300px;  
+  rotate: -6deg;
 }
 
 #record .spin{
