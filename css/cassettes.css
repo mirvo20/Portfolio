@@ -1,0 +1,18 @@
+
+#shelf{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cassette-box{
+  width: 300px;
+  
+}
+
+.cassette-box svg{
+  width: 100%;;
+  height: auto;
+
+}

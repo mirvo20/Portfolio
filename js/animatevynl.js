@@ -7,7 +7,7 @@ var svgNS = 'http://www.w3.org/2000/svg';
 
 
 async function load_player() { // have to use async so i can make it start after elemts start loading in
-    var response = await fetch('./assets/player-grouped.svg');
+    var response = await fetch('./assets/vynl/player-grouped.svg');
     var svgTxt = await response.text();
 
     box.innerHTML = svgTxt;
