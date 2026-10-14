@@ -4,15 +4,82 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  margin-top: 50px;
 }
 
 .cassette-box{
   width: 300px;
-  
+  position: relative;
+  container-type: inline-size;
 }
 
 .cassette-box svg{
   width: 100%;;
   height: auto;
+  display: block;
+}
 
+.cassette-art{
+    position: absolute;
+    left: 8.3%;
+    top: 12.1%;
+    width: 10.3%;
+    height: 16.5%;
+    overflow: hidden;
+    border-radius: 12%;
+    pointer-events: none;
+}
+
+.cassette-art img, .cassette-art iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 0;
+    display: block;
+}
+
+.cassette-name, .cassette-tagline{
+  position: absolute;
+  left: 20.7%;
+  right: 58.6%;
+  transform: translateY(-100%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #1a1a1a;
+  font-family: 'Courier New', monospace;
+  line-height: 1.1;
+  pointer-events: none;
+}
+
+.cassette-name{
+top: 15.4%;
+font-size: 4.3cqw;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.cassette-tagline{
+    top: 23.6%;
+    font-size: 3.2cqw;
+}
+
+.cassette-blurb{
+  position: absolute;
+  left: 50%;
+  bottom: 105%;
+  transform: translateX(-50%);
+  padding: .4em .8em;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
+  z-index: 10;
+}
+
+.cassette-box:hover .cassette-blurb{
+  opacity: 1;
 }

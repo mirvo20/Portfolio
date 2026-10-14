@@ -32,7 +32,7 @@ function projects(){
     projects_btn.classList.add("selected")
 }
 
-// as the page refreshed the states were being refreshed so i found a fix online:
+// as the page refreshed the states were being refreshed so i found a fix:
 
 const page = window.location.pathname.split("/").pop();
 
